@@ -145,7 +145,17 @@
             document.getElementById('passageDateResult5').innerHTML = `Nb2-11 cells should be passaged on: ${formattedPassageDate5}`;
         }
     </script>
-            
+             <script>
+        // Set the min attribute for date input fields to today's date
+        const today = new Date().toISOString().split("T")[0];
+
+        // Set the min attribute for the assay date input fields
+        document.getElementById("assayDate").min = today;
+        document.getElementById("assayDate2").min = today;
+        document.getElementById("assayDate3").min = today;
+        document.getElementById("assayDate4").min = today;
+        document.getElementById("assayDate5").min = today;
+    </script>
         </div>
     </div>
 </body>
