@@ -12,13 +12,21 @@
     .enterDate {
         background-color: ivory; /* Replace 'lightblue' with your desired color */
     }
-</style>
+    
+    </style>
+
+    <script>
+    function Fred(){
+        document.getElementById('passageDateResult').innerHTML = `fred was here`;
+    }
+    </script>
+
 
 </head>
 <body>
     <div class="container text-center">
         <div class="row justify-content-start">
-            <div class="col-lg-4">
+            <div class="ramos col-lg-4">
                 <h3>Ramos Cell Passage Calculator (needed for PF7 & PF7 ADCC)</h3>
                 <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
                 <input class="enterDate" type="date" id="assayDate" min="today">
@@ -29,7 +37,7 @@
                 </select>
                 <button class="button" onclick="calculatePassageDate()">Calculate Passage Date</button>
                 <p id="passageDateResult"></p>
-
+                </style>
                 <script>
                     function calculatePassageDate() {
                         const assayDate = new Date(document.getElementById('assayDate').value);
@@ -43,7 +51,7 @@
                 </script>
             </div>
 
-            <div class="col-lg-4">
+            <div class="FDC col-lg-4">
                 <h3>FDC-P1 Cell Passage Calculator (needed for Som SU)</h3>
                 <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
                 <input  class="enterDate" type="date" id="assayDate2">
@@ -67,22 +75,19 @@
                     }
                 </script>
             </div>
-        
-    <div class="row">
-        <div class="col-lg-4">
-            <h3>Baf Cell Passage Calculator (needed for Mod SU)</h3>
-            <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
-            <input  class="enterDate" type="date" id="assayDate3">
-            <label for="growthDays3">Required Growth Days:</label>
-            <select  class="enterDate" id="growthDays3">
-                <option value="1">1 day</option>
-                <option value="2">2 days</option>
-                <option value="3">3 days</option>
-                <option value="4">4 days</option>
-            </select>
+            <div class="Baf col-lg-4">
+                <h3>Baf Cell Passage Calculator (needed for Mod SU)</h3>
+                <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
+                <input  class="enterDate" type="date" id="assayDate3">
+                <label for="growthDays3">Required Growth Days:</label>
+                <select  class="enterDate" id="growthDays3">
+                    <option value="1">1 day</option>
+                    <option value="2">2 days</option>
+                    <option value="3">3 days</option>
+                    <option value="4">4 days</option>
+                </select>
             <button class="button" onclick="calculatePassageDate3()">Calculate Passage Date</button>
             <p id="passageDateResult3"></p>
-
             <script>
                 function calculatePassageDate3() {
                     const assayDate3 = new Date(document.getElementById('assayDate3').value);
@@ -94,9 +99,9 @@
                     document.getElementById('passageDateResult3').innerHTML = `Baf cells should be passaged on: ${formattedPassageDate3}`;
                 }
             </script>
-        </div>
+            </div>
 
-        <div class="col-lg-4">
+            <div class="Jurkat col-lg-4">
             <h3>Jurkat Cell Passage Calculator (needed for ****)</h3>
             <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
             <input  class="enterDate" type="date" id="assayDate4">
@@ -120,19 +125,19 @@
                     document.getElementById('passageDateResult4').innerHTML = `Jurkat cells should be passaged on: ${formattedPassageDate4}`;
                 }
             </script>
-        </div>
-<div class="col-lg-4">
-    <h3>Nb2-11 Cell Passage Calculator (needed for ****)</h3>
-    <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
-    <input  class="enterDate" type="date" id="assayDate5">
-    <label for="growthDays5">Required Growth Days:</label>
-    <select  class="enterDate" id="growthDays5">
-        <option value="2">2 days</option>
-        <option value="3">3 days</option>
-        <option value="4">4 days</option>
-    </select>
-    <button class="button" onclick="calculatePassageDate5()">Calculate Passage Date</button>
-    <p id="passageDateResult5"></p>
+            </div>
+            <div class="Nb2-11 col-lg-4">
+                    <h3>Nb2-11 Cell Passage Calculator (needed for ****)</h3>
+                    <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
+                    <input  class="enterDate" type="date" id="assayDate5">
+                    <label for="growthDays5">Required Growth Days:</label>
+                    <select  class="enterDate" id="growthDays5">
+                        <option value="2">2 days</option>
+                        <option value="3">3 days</option>
+                        <option value="4">4 days</option>
+                    </select>
+                    <button class="button" onclick="calculatePassageDate5()">Calculate Passage Date</button>
+                    <p id="passageDateResult5"></p>
 
     <script>
         function calculatePassageDate5() {
@@ -145,17 +150,43 @@
             document.getElementById('passageDateResult5').innerHTML = `Nb2-11 cells should be passaged on: ${formattedPassageDate5}`;
         }
     </script>
-             <script>
-        // Set the min attribute for date input fields to today's date
+    </div>
+            <div class="U937 col-lg-4">
+                <h3>U937 Cell Passage Calculator (needed for Apop, Ada, & PF9)</h3>
+                <p>Enter the date of the assay and select the required days for cell growth before the assay:</p>
+                <input  class="enterDate" type="date" id="assayDate6">
+                <label for="growthDays6">Required Growth Days:</label>
+                <select  class="enterDate" id="growthDays6">
+                    <option value="2">2 days</option>
+                    <option value="3">3 days</option>
+                </select>
+                <button class="button" onclick="calculatePassageDate6()">Calculate Passage Date</button>
+                <p id="passageDateResult6"></p>
+                </script>
+                <script>
+                    function calculatePassageDate6() {
+                    const assayDate6 = new Date(document.getElementById('assayDate6').value);
+                    const growthDays6 = parseInt(document.getElementById('growthDays6').value);
+                    const passageDate6 = new Date(assayDate6);
+                    passageDate6.setDate(assayDate6.getDate() - growthDays6);
+        
+                    const formattedPassageDate6 = passageDate6.toDateString();
+                    document.getElementById('passageDateResult6').innerHTML = `U937 cells should be passaged on: ${formattedPassageDate5}`;
+                }
+
+    
         const today = new Date().toISOString().split("T")[0];
 
-        // Set the min attribute for the assay date input fields
+        
         document.getElementById("assayDate").min = today;
         document.getElementById("assayDate2").min = today;
         document.getElementById("assayDate3").min = today;
         document.getElementById("assayDate4").min = today;
         document.getElementById("assayDate5").min = today;
+        document.getElementById("assayDate6").min = today;
     </script>
+    </script>
+            </div>
         </div>
     </div>
 </body>
